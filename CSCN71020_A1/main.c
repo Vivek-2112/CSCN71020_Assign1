@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-void printWelcomeMenu();
-void printOptions();
-void add();
-
-
 int main() {
 
 	double num1, num2, result;
@@ -31,21 +26,12 @@ int main() {
 
 	switch (option) {
 	case 1:
-		add();
+		result = num1 + num2;
+		printf("Addition: %lf\n", result);
 	case 2:
 		result = num1 - num2;
 		printf("Difference: %lf\n", result);
 	}
 
-}
-
-
-void add() {
-	double num1, num2, result;
-	printf("Enter the first value:");
-	scanf_s("%lf", &num1);
-	printf("Enter the second value:");
-	scanf_s("%lf", &num2);
-	result = num1 + num2;
-	printf("%lf + %lf = %lf\n", num1, num2, result);
+	return 0;
 }
